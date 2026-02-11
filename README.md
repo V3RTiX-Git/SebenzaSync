@@ -49,6 +49,7 @@ cp .env.example .env
 ```
 
 Update the `.env` file with your actual values:
+
 - `DATABASE_URL`: Your PostgreSQL connection string
 - `NEXTAUTH_SECRET`: Generate with `openssl rand -base64 32`
 - `S3_*`: Your AWS S3 credentials (if using S3)
@@ -102,6 +103,7 @@ sebenzasync/
 ## Database Schema
 
 The initial schema includes placeholder models:
+
 - `User` - User accounts
 - `Project` - Project information
 - `Update` - Project updates
@@ -111,6 +113,7 @@ These will be expanded as features are implemented.
 ## CI/CD
 
 GitHub Actions workflow is configured to:
+
 - Install dependencies
 - Run linting
 - Build the application
