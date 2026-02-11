@@ -50,7 +50,7 @@ jobs:
           DATABASE_URL: postgresql://postgres:postgres@localhost:5432/sebenzasync_test
 
       - name: Run database migrations (main branch only)
-        if: github.ref == 'refs/heads/main'
+        if: github.ref == 'refs/heads/main' && secrets.DATABASE_URL != ''
         run: npx prisma migrate deploy
         env:
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
